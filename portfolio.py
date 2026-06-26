@@ -50,9 +50,9 @@ SECTIONS = {
     "about": {
         "title": "ABOUT ME",
         "lines": [
-            "  My name:   Artjom Japins",
-            "  Location:   United Kingdom",
-            "  Reason   Passion for building things that have a combination of design and creativity."
+            " My name:   Artjom Japins",
+            " Location:   United Kingdom",
+            " Reason:  Passion for building things that have a combination \n     of design and creativity."
             "",
             "",
             "",
@@ -64,8 +64,8 @@ SECTIONS = {
             "",
             "",
             "Current goals:",
-            "Finish some of the incomplete projects i have been working on."
-            "Expand my knowledge"
+            "•Finish some of the incomplete projects,",
+            "•Expand my knowledge."
         ]
     },
     "projects": {
@@ -265,7 +265,7 @@ def draw_section(stdscr, key):
     for line in data["lines"]:
         safe_add(stdscr, y, 4, line, curses.color_pair(C_TEXT))
         y += 1
-    safe_add(stdscr, h - 2, 4, "[ backspace ] return", curses.color_pair(C_DIM))
+    safe_add(stdscr, h - 2, 4, "[ Q ] return", curses.color_pair(C_DIM))
     stdscr.refresh()
 
 
