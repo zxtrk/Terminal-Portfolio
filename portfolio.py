@@ -270,7 +270,7 @@ def draw_home(stdscr, selected):
     safe_add(stdscr, links_top + 2, box_col + 2, "github.com/zxrk", curses.color_pair(C_TEXT))
 
     # ── Footer ───────────────────────────────────────────────────────────
-    footer_left  = "[ ↑ ↓ navigate ]  [ enter open ]  [ q quit ]"
+    footer_left  = "[ ↑ ↓ ] Navigate   [ Enter] Open   [ Q ] Quit"
     footer_right = "v2.0 • handcrafted terminal portfolio"
     safe_add(stdscr, h - 2, 2,              footer_left,  curses.color_pair(C_DIM))
     safe_add(stdscr, h - 2, w - len(footer_right) - 2,
