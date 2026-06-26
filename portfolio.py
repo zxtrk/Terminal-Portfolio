@@ -7,7 +7,7 @@ ASCII_ART = [
     'wwqqqppqpqqwqwqqwmmZZZO0000LQLLLCCJUJYYYXXccccvv',
     'ao*oaooaaoaaaahhkkkhaohbdpdpqmmmOQQQQLJJJUYXzzcc',
     'ao*o**oooooahao##*hmJvxnftjCOOmOO0QQQCJJUUUYXzcc',
-    "a##M####**oa#*pQx[!' : .   .:~[{n0OQQCJJJUYXzXzv",
+    "ao*o**oooooahao##*hmJvxnftjCOOmOO0QQQCJJUUUYXzcc",
     "##MMWWM#*##aY)?! .`  .'...'     .+rzYCCJJUYzzXzv",
     '####MMW*oam\\<:il";` \'\'             I}f-jCYXXzcvu',
     '#M#M##MaOu?<~\'.     .                "{cUXzXcvvn',
@@ -34,9 +34,9 @@ ASCII_ART = [
 BIG_NAME = [
     "  █████╗ ██████╗ ████████╗     ██╗ ██████╗ ███╗   ███╗",
     " ██╔══██╗██╔══██╗╚══██╔══╝     ██║██╔═══██╗████╗ ████║",
-    " ███████║██████╔╝   ██║        ██║██║   ██║██╔████╔██║",
+    " ███████║██████╔╝   ██║        ██║██║   ██║██╔██████║",
     " ██╔══██║██╔══██╗   ██║   ██   ██║██║   ██║██║╚██╔╝██║",
-    " ██║  ██║██║  ██║   ██║   ╚█████╔╝╚██████╔╝██║ ╚═╝ ██║",
+    " ██║  ██║██║  ██║   ██║   ╚█████╝╚██████╔╝██║ ╚═╝ ██║",
     " ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚════╝  ╚═════╝ ╚═╝     ╚═╝",
 ]
 
@@ -46,13 +46,34 @@ MENU_ITEMS = [
     ("contact",  "Contact"),
 ]
 
+COMPUTER_ASCII = [
+    "       ╔═══════════╗       ",
+    "       ║  ╔═════╗  ║       ",
+    "       ║  ║     ║  ║       ",
+    "       ║  ║     ║  ║       ",
+    "       ║  ║     ║  ║       ",
+    "       ║  ║     ║  ║       ",
+    "       ║  ╚═════╝  ║       ",
+    "       ╚═══════════╝       ",
+    "           ║║║             ",
+    "       ╔═══╝║╚═══╗         ",
+    "       ║███████║█║         ",
+    "       ║███████║█║         ",
+    "       ╚═══════╩═╝         ",
+    "                           ",
+    "    ╔═══════════════╗      ",
+    "    ║███████████████║      ",
+    "    ║███████████████║      ",
+    "    ╚═══════════════╝      ",
+]
+
 SECTIONS = {
     "about": {
         "title": "ABOUT ME",
         "lines": [
             " My name:   Artjom Japins",
             " Location:   United Kingdom",
-            " Reason:  Passion for building things that have a combination \n     of design and creativity."
+            " Reason:  Passion for building things that have a combination \n     of design and creativity.",
             "",
             "",
             "",
@@ -265,6 +286,14 @@ def draw_section(stdscr, key):
     for line in data["lines"]:
         safe_add(stdscr, y, 4, line, curses.color_pair(C_TEXT))
         y += 1
+    
+    # Draw computer ASCII art on the right side for About section
+    if key == "about":
+        computer_x = w - 35
+        computer_y = 6
+        for i, line in enumerate(COMPUTER_ASCII):
+            safe_add(stdscr, computer_y + i, computer_x, line, curses.color_pair(C_ASCII))
+    
     safe_add(stdscr, h - 2, 4, "[ Q ] return", curses.color_pair(C_DIM))
     stdscr.refresh()
 
