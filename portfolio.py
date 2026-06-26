@@ -43,7 +43,6 @@ BIG_NAME = [
 MENU_ITEMS = [
     ("about",    "About Me"),
     ("projects", "Projects"),
-    ("skills",   "Skills"),
     ("contact",  "Contact"),
 ]
 
@@ -51,22 +50,22 @@ SECTIONS = {
     "about": {
         "title": "ABOUT ME",
         "lines": [
-            "Name      Artjom Japins",
-            "Location  Coventry, United Kingdom",
-            "Role      Creative Developer",
-            "Age       17",
+            "  My name:   Artjom Japins",
+            "  Location:   United Kingdom",
+            "  Reason   Passion for building things that have a combination of design and creativity."
             "",
-            "Building things that combine design,",
-            "engineering and usability.",
+            "",
             "",
             "Focused on:",
-            "• Full-stack development",
+            "• Creating new projects as a hobby",
             "• Cloud infrastructure",
             "• Design systems",
             "• Interactive experiences",
             "",
-            "Current goal:",
-            "Ship projects used by real people."
+            "",
+            "Current goals:",
+            "Finish some of the incomplete projects i have been working on."
+            "Expand my knowledge"
         ]
     },
     "projects": {
