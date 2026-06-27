@@ -36,7 +36,7 @@ The experience includes a home screen with a large ASCII name block and portrait
 
 ---
 
-## Try it
+## Want to try it?
 
 ```sh
 ssh portfolio@artjomjapins.site
@@ -118,6 +118,6 @@ On Windows, run this inside WSL — `curses` is not natively available in the st
 
 ---
 
-                                            *Built for the love of building things.*
+                                    *Built for the love of building things.*
 
 </div>
