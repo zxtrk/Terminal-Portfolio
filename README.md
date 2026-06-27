@@ -118,6 +118,6 @@ On Windows, run this inside WSL — `curses` is not natively available in the st
 
 ---
 
-                                    *Built for the love of building things.*
+**Built for the love of building things.**
 
 </div>
