@@ -51,23 +51,71 @@ COMPUTER_ASCII = [
 " ",
 " ",
 " ",
-"          _______________________",
-"         /______________________/|",
-"        |  _________________   | |",
-"        | |                 |  | |",
-"        | |   C:\\> _        |  | |",
-"        | |                 |  | |",
-"        | |_________________|  | |",
-"        | |:::::::::::::::::|  |/",
-"        |_____________________|/",
-"             ||         ||",
-"         ____||_________||____",
-"        /____________________/|",
-"       |  ________________   | |",
-"       | | [] [] [] [] [] |  | |",
-"       | |________________|  | |",
-"       |______________________|/",
-"              /_/      \\_\\",
+"     _______________________",
+"    /______________________/|",
+"   |  _________________   | |",
+"   | |                 |  | |",
+"   | |   C:\\> _        |  | |",
+"   | |                 |  | |",
+"   | |_________________|  | |",
+"   | |:::::::::::::::::|  |/",
+"   |_____________________|/",
+"        ||         ||",
+"    ____||_________||____",
+"   /____________________/|",
+"  |  ________________   | |",
+"  | | [] [] [] [] [] |  | |",
+"  | |________________|  | |",
+"  |______________________|/",
+"         /_/      \\_\\",
+]
+
+# Old floppy disk / tape reel for Projects section
+FLOPPY_ASCII = [
+" ",
+" ",
+"   .-------------------------.",
+"   |  .------.  [ DISK  01 ] |",
+"   |  |      |  ___________  |",
+"   |  |  []  | |           | |",
+"   |  |      | |  3.5\" HD  | |",
+"   |  '------'  |___________| |",
+"   |   _______________________ |",
+"   |  | ##################### ||",
+"   |  | # ARTJOM JAPINS      # ||",
+"   |  | # PROJECTS  VOL.1    # ||",
+"   |  | ##################### ||",
+"   |  |_______________________||",
+"   |___________________________|",
+"        |___________________|",
+"          |  |         |  |",
+"         [____]       [____]",
+" ",
+"   INSERT DISK TO LOAD PROJECT",
+]
+
+# Old rotary phone / punchcard for Contact section
+PHONE_ASCII = [
+" ",
+" ",
+"      .------======-----.",
+"     /   ______________  \\",
+"    /   /              \\  \\",
+"   |   |   .---------.  |  |",
+"   |   |   |  RING   |  |  |",
+"   |   |   |  RING   |  |  |",
+"   |   |   '---------'  |  |",
+"   |   |  _____   ___   |  |",
+"   |   | ( 1 ) ( 2 ) ( 3 )  |",
+"   |   | ( 4 ) ( 5 ) ( 6 )  |",
+"   |   | ( 7 ) ( 8 ) ( 9 )  |",
+"   |   | ( * ) ( 0 ) ( # )  |",
+"   |    \\_________________/  |",
+"    \\    _________________  /",
+"     \\  /                 \\/",
+"      '--==================--'",
+"         DIAL FOR CONTACT",
+" ",
 ]
 
 SECTIONS = {
@@ -223,10 +271,7 @@ def draw_home(stdscr, selected):
     y += 2
 
     # ── Menu items ───────────────────────────────────────────────────────
-    # Fixed menu width: longest label is "Projects" = 8 chars
-    # Box inner content: "> Projects" = 10 chars, pad 1 each side = 12 inner
-    # Total box width = 12 + 2 (borders) = 14, plus 2 leading spaces = 16 total render width
-    MENU_BOX_INNER_W = 14   # fixed inner width for all items ("> About Me  " padded to 12 + 2 spaces)
+    MENU_BOX_INNER_W = 14
     menu_col      = start_x_right
     start_menu_y  = y
 
@@ -235,7 +280,6 @@ def draw_home(stdscr, selected):
 
         if idx == selected:
             arrow_label = f"> {label}"
-            # pad to fixed width so box is always the same size
             padded = arrow_label.ljust(MENU_BOX_INNER_W)
             top    = "┌" + "─" * (MENU_BOX_INNER_W + 2) + "┐"
             mid    = "│ " + padded + " │"
@@ -244,14 +288,12 @@ def draw_home(stdscr, selected):
             safe_add(stdscr, row + 1, menu_col, mid, curses.color_pair(C_SELECTED) | curses.A_BOLD)
             safe_add(stdscr, row + 2, menu_col, bot, curses.color_pair(C_ACCENT))
         else:
-            # indent to visually align with the box content (border + space = 2 chars offset)
             safe_add(stdscr, row + 1, menu_col + 2,
                      label.ljust(MENU_BOX_INNER_W),
                      curses.color_pair(C_ACCENT))
 
     # ── Info boxes (right of menu) ───────────────────────────────────────
-    # Place them right after the menu block (fixed box width = MENU_BOX_INNER_W + 4)
-    menu_block_w = MENU_BOX_INNER_W + 4   # borders + spaces
+    menu_block_w = MENU_BOX_INNER_W + 4
     box_col   = menu_col + menu_block_w + 2
     box_width = 28
 
@@ -289,14 +331,27 @@ def draw_section(stdscr, key):
     for line in data["lines"]:
         safe_add(stdscr, y, 4, line, curses.color_pair(C_TEXT))
         y += 1
-    
-    # Draw computer ASCII art on the right side for About section
+
+    # Draw ASCII art on the right side for each section
     if key == "about":
-        computer_x = w - 35
-        computer_y = 6
-        for i, line in enumerate(COMPUTER_ASCII):
-            safe_add(stdscr, computer_y + i, computer_x, line, curses.color_pair(C_ASCII))
-    
+        art = COMPUTER_ASCII
+        art_x = w - 38
+        art_y = 5
+        for i, line in enumerate(art):
+            safe_add(stdscr, art_y + i, art_x, line, curses.color_pair(C_ASCII))
+    elif key == "projects":
+        art = FLOPPY_ASCII
+        art_x = w - 36
+        art_y = 4
+        for i, line in enumerate(art):
+            safe_add(stdscr, art_y + i, art_x, line, curses.color_pair(C_ASCII))
+    elif key == "contact":
+        art = PHONE_ASCII
+        art_x = w - 36
+        art_y = 4
+        for i, line in enumerate(art):
+            safe_add(stdscr, art_y + i, art_x, line, curses.color_pair(C_ASCII))
+
     safe_add(stdscr, h - 2, 4, "[ Q ] return", curses.color_pair(C_DIM))
     stdscr.refresh()
 
