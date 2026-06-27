@@ -1,12 +1,12 @@
 <div align="center">
 
 ```
-    ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗
-    ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
-    ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
-    ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
-    ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
-    ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝
+                          ██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ ██╗     ██╗ ██████╗
+                          ██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔═══██╗██║     ██║██╔═══██╗
+                          ██████╔╝██║   ██║██████╔╝   ██║   █████╗  ██║   ██║██║     ██║██║   ██║
+                          ██╔═══╝ ██║   ██║██╔══██╗   ██║   ██╔══╝  ██║   ██║██║     ██║██║   ██║
+                          ██║     ╚██████╔╝██║  ██║   ██║   ██║     ╚██████╔╝███████╗██║╚██████╔╝
+                          ╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝      ╚═════╝ ╚══════╝╚═╝ ╚═════╝
 ```
 
 *A handcrafted interactive terminal experience — accessible from anywhere, over SSH.*
@@ -46,9 +46,15 @@ That is all. Works on macOS, Linux, and Windows (PowerShell, Git Bash, or WSL). 
 
 ---
 
-## Navigation
+## Navigation & Stack
 
-Once connected, the interface is fully keyboard-driven — no mouse required.
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Navigation**
+
+Once connected the interface is fully keyboard-driven — no mouse required.
 
 | Key | Action |
 |---|---|
@@ -56,6 +62,24 @@ Once connected, the interface is fully keyboard-driven — no mouse required.
 | `↓` or `j` | Move selection down |
 | `Enter` | Open selected section |
 | `Q` | Return to home or quit |
+
+</td>
+<td width="50%" valign="top">
+
+**Stack**
+
+| | |
+|---|---|
+| Language | Python 3 (stdlib only) |
+| TUI | `curses` |
+| Protocol | OpenSSH |
+| Infrastructure | Oracle Cloud — Always Free |
+| OS | Ubuntu 22.04 LTS |
+| Process management | `systemd` |
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -68,19 +92,6 @@ your terminal  ──SSH──▶  Oracle Cloud VM  ──ForceCommand──▶ 
 ```
 
 The entire application is a single Python file with no external dependencies. Everything — layout engine, colour system, ASCII art, navigation state — lives in `portfolio.py` and runs on the Python standard library alone.
-
----
-
-## Stack
-
-| | |
-|---|---|
-| Language | Python 3 (stdlib only) |
-| TUI | `curses` |
-| Protocol | OpenSSH |
-| Infrastructure | Oracle Cloud — Always Free tier |
-| OS | Ubuntu 22.04 LTS |
-| Process management | `systemd` |
 
 ---
 
@@ -98,48 +109,15 @@ On Windows, run this inside WSL — `curses` is not natively available in the st
 
 ---
 
-## Project layout
-
-```
-terminal-portfolio/
-└── portfolio.py        # The entire application — one file, no dependencies
-```
-
-The single-file approach is deliberate. A complete, self-contained experience fitting in one place has its own kind of discipline to it.
-
----
-
-## Self-hosting
-
-If you want to adapt this for your own server, the rough steps are:
-
-```sh
-# 1. Create a restricted user
-sudo useradd -m -s /bin/bash portfolio
-
-# 2. Drop your script onto the server
-scp portfolio.py user@your-server:/home/portfolio/
-
-# 3. Force all SSH connections for that user into the portfolio
-#    Add to /etc/ssh/sshd_config:
-Match User portfolio
-    ForceCommand python3 /home/portfolio/portfolio.py
-    PermitTTY yes
-
-# 4. Reload SSH
-sudo systemctl reload sshd
-```
-
----
 
 <div align="center">
 
-**Artjom Japins** — Creative Designer & Digital Builder
+**Artjom Japins** — Zxtrk
 
-[artjomjapins.site](https://artjomjapins.site) · [github.com/zxrk](https://github.com/zxrk) · [hello@artjomjapins.site](mailto:hello@artjomjapins.site)
+[artjomjapins.site](https://artjomjapins.site) · [github.com/zxrk](https://github.com/zxrk) · [japinsartjom@gmail.com](mailto:japinsartjom@gmail.com)
 
 ---
 
-*Handcrafted in the terminal. Built for the love of building things.*
+                                            *Built for the love of building things.*
 
 </div>
