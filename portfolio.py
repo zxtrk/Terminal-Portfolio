@@ -2,6 +2,18 @@
 import curses
 import time
 
+"""
+  terminal-portfolio
+  ------------------
+  Author   : Artjom Japins
+  Website  : artjomjapins.site
+  GitHub   : github.com/zxrk
+  Access   : ssh portfolio@artjomjapins.site
+ 
+  Copyright (c) 2024 Artjom Japins. All rights reserved.
+  Do not reproduce or redistribute without permission.
+"""
+
 ASCII_ART = [
     'OZZZmmmwwmmmmmwmmZOOO000QQQLCJJJJJJUYYYXzzzccvvu',
     'wwqqqppqpqqwqwqqwmmZZZO0000LQLLLCCJUJYYYXXccccvv',
