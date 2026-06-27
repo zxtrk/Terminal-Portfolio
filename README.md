@@ -21,7 +21,7 @@
 
 ---
 
-> **Copyright (c) 2024 Artjom Japins. All rights reserved.**
+> **Copyright (c) 2026 Artjom Japins. All rights reserved.**
 > This project — including its design, layout, ASCII art, and written content — is the original work of Artjom Japins. You are welcome to view the source for inspiration, but reproducing, redistributing, or presenting this work as your own is not permitted without explicit written permission.
 
 ---
