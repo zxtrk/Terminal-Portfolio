@@ -70,52 +70,61 @@ COMPUTER_ASCII = [
 "         /_/      \\_\\",
 ]
 
-# Old floppy disk / tape reel for Projects section
 FLOPPY_ASCII = [
-" ",
-" ",
-"   .-------------------------.",
-"   |  .------.  [ DISK  01 ] |",
-"   |  |      |  ___________  |",
-"   |  |  []  | |           | |",
-"   |  |      | |  3.5\" HD  | |",
-"   |  '------'  |___________| |",
-"   |   _______________________ |",
-"   |  | ##################### ||",
-"   |  | # ARTJOM JAPINS      # ||",
-"   |  | # PROJECTS  VOL.1    # ||",
-"   |  | ##################### ||",
-"   |  |_______________________||",
-"   |___________________________|",
-"        |___________________|",
-"          |  |         |  |",
-"         [____]       [____]",
-" ",
-"   INSERT DISK TO LOAD PROJECT",
+"  .--------------------------------.",
+"  |  .----------.  [ DISK  01 ]   |",
+"  |  |  ______  |  _____________  |",
+"  |  | |      | | |  CAPACITY:  | |",
+"  |  | | [##] | | |   1.44 MB   | |",
+"  |  | |      | | |   3.5 inch  | |",
+"  |  | |______| | |_____________| |",
+"  |  '----------'                 |",
+"  |  ______________________________| ",
+"  | | ############################ ||",
+"  | | #                          # ||",
+"  | | #   ARTJOM  JAPINS         # ||",
+"  | | #   ~~~~~~~~~~~~~~~~~~~~~~ # ||",
+"  | # #   PROJECTS  VOL.1        # ||",
+"  | | #   ~~~~~~~~~~~~~~~~~~~~~~ # ||",
+"  | | #   github.com/zxrk       # ||",
+"  | | #                          # ||",
+"  | | ############################ ||",
+"  | |____________________________|/ ",
+"  |________________________________| ",
+"    |   |   |            |   |   |  ",
+"    '---'   '------------'   '---'  ",
+"   [SLOT]      FORMATTED      [WP] ",
+"                                    ",
+"   >> INSERT DISK TO LOAD PROJECT   ",
 ]
 
-# Old rotary phone / punchcard for Contact section
 PHONE_ASCII = [
-" ",
-" ",
-"      .------======-----.",
-"     /   ______________  \\",
-"    /   /              \\  \\",
-"   |   |   .---------.  |  |",
-"   |   |   |  RING   |  |  |",
-"   |   |   |  RING   |  |  |",
-"   |   |   '---------'  |  |",
-"   |   |  _____   ___   |  |",
-"   |   | ( 1 ) ( 2 ) ( 3 )  |",
-"   |   | ( 4 ) ( 5 ) ( 6 )  |",
-"   |   | ( 7 ) ( 8 ) ( 9 )  |",
-"   |   | ( * ) ( 0 ) ( # )  |",
-"   |    \\_________________/  |",
-"    \\    _________________  /",
-"     \\  /                 \\/",
-"      '--==================--'",
-"         DIAL FOR CONTACT",
-" ",
+"         .------=========------.",
+"        /   _______________     \\",
+"       /   /               \\    \\",
+"      /   / .------------.  \\    \\",
+"     |   | |  o  CALL  o  |  |   |",
+"     |   | |   ~~RING~~   |  |   |",
+"     |   | |  RING! RING! |  |   |",
+"     |   | |              |  |   |",
+"     |   | '--------------'  |   |",
+"     |   |  ___    ___       |   |",
+"     |   | | 1 |  | 2 |  | 3 |  |",
+"     |   | |___|  |___|  |___|  |",
+"     |   | | 4 |  | 5 |  | 6 |  |",
+"     |   | |___|  |___|  |___|  |",
+"     |   | | 7 |  | 8 |  | 9 |  |",
+"     |   | |___|  |___|  |___|  |",
+"     |   | | * |  | 0 |  | # |  |",
+"     |   | |___|  |___|  |___|  |",
+"     |   |  _________________   |",
+"     |    \\___________________/ |",
+"      \\     ___________________/",
+"       \\   / [===============] /",
+"        \\ /___________________/",
+"         '--=================--'",
+"                                ",
+"    >> PICK UP TO MAKE CONTACT  ",
 ]
 
 SECTIONS = {
@@ -144,15 +153,23 @@ SECTIONS = {
         "title": "PROJECTS",
         "lines": [
             "01  Terminal Portfolio",
-            "",
-            "Interactive SSH portfolio.",
-            "Hosted on Oracle Cloud.",
-            "Python + curses.",
+            "    ───────────────────────────────",
+            "    Interactive SSH portfolio.",
+            "    Hosted on Oracle Cloud.",
+            "    Stack: Python + curses",
+            "    Status: [ LIVE ]",
             "",
             "02  Upcoming Projects",
+            "    ───────────────────────────────",
+            "    More tools and experiments",
+            "    currently in development.",
+            "    Status: [ IN PROGRESS ]",
             "",
-            "More tools and experiments",
-            "currently in development."
+            "03  Open Source Contributions",
+            "    ───────────────────────────────",
+            "    Various tools and utilities.",
+            "    github.com/zxrk",
+            "    Status: [ ONGOING ]",
         ]
     },
     "skills": {
@@ -174,14 +191,28 @@ SECTIONS = {
     "contact": {
         "title": "CONTACT",
         "lines": [
-            "Email",
-            "hello@artjomjapins.site",
+            "  Get in touch — always open to",
+            "  interesting projects & conversations.",
             "",
-            "Website",
-            "artjomjapins.site",
+            "  ┌──────────────────────────────────┐",
+            "  │  EMAIL                           │",
+            "  │  hello@artjomjapins.site         │",
+            "  └──────────────────────────────────┘",
             "",
-            "SSH",
-            "ssh portfolio@artjomjapins.site"
+            "  ┌──────────────────────────────────┐",
+            "  │  WEBSITE                         │",
+            "  │  artjomjapins.site               │",
+            "  └──────────────────────────────────┘",
+            "",
+            "  ┌──────────────────────────────────┐",
+            "  │  SSH PORTFOLIO                   │",
+            "  │  ssh portfolio@artjomjapins.site │",
+            "  └──────────────────────────────────┘",
+            "",
+            "  ┌──────────────────────────────────┐",
+            "  │  GITHUB                          │",
+            "  │  github.com/zxrk                │",
+            "  └──────────────────────────────────┘",
         ]
     }
 }
@@ -236,13 +267,11 @@ def draw_home(stdscr, selected):
     start_x_right = 60
     start_y = max(1, (h - len(ASCII_ART)) // 2)
 
-    # ── ASCII art ────────────────────────────────────────────────────────
     for i, line in enumerate(ASCII_ART):
         safe_add(stdscr, start_y + i, start_x_left, line, curses.color_pair(C_ASCII))
 
     y = start_y
 
-    # ── Big block name ───────────────────────────────────────────────────
     for line in BIG_NAME:
         safe_add(stdscr, y, start_x_right, line, curses.color_pair(C_TITLE) | curses.A_BOLD)
         y += 1
@@ -263,14 +292,12 @@ def draw_home(stdscr, selected):
              curses.color_pair(C_TEXT))
     y += 2
 
-    # thin divider
     divider_len = 54
     safe_add(stdscr, y, start_x_right,
              "·" * divider_len,
              curses.color_pair(C_DIM))
     y += 2
 
-    # ── Menu items ───────────────────────────────────────────────────────
     MENU_BOX_INNER_W = 14
     menu_col      = start_x_right
     start_menu_y  = y
@@ -292,7 +319,6 @@ def draw_home(stdscr, selected):
                      label.ljust(MENU_BOX_INNER_W),
                      curses.color_pair(C_ACCENT))
 
-    # ── Info boxes (right of menu) ───────────────────────────────────────
     menu_block_w = MENU_BOX_INNER_W + 4
     box_col   = menu_col + menu_block_w + 2
     box_width = 28
@@ -311,7 +337,6 @@ def draw_home(stdscr, selected):
     safe_add(stdscr, links_top + 1, box_col + 2, "artjomjapins.site",      curses.color_pair(C_ACCENT))
     safe_add(stdscr, links_top + 2, box_col + 2, "github.com/zxrk", curses.color_pair(C_TEXT))
 
-    # ── Footer ───────────────────────────────────────────────────────────
     footer_left  = "[ ↑ ↓ ] Navigate   [ Enter] Open   [ Q ] Quit"
     footer_right = "v2.0 • handcrafted terminal portfolio"
     safe_add(stdscr, h - 2, 2,              footer_left,  curses.color_pair(C_DIM))
@@ -332,7 +357,6 @@ def draw_section(stdscr, key):
         safe_add(stdscr, y, 4, line, curses.color_pair(C_TEXT))
         y += 1
 
-    # Draw ASCII art on the right side for each section
     if key == "about":
         art = COMPUTER_ASCII
         art_x = w - 38
@@ -341,14 +365,14 @@ def draw_section(stdscr, key):
             safe_add(stdscr, art_y + i, art_x, line, curses.color_pair(C_ASCII))
     elif key == "projects":
         art = FLOPPY_ASCII
-        art_x = w - 36
-        art_y = 4
+        art_x = w - 42
+        art_y = 3
         for i, line in enumerate(art):
             safe_add(stdscr, art_y + i, art_x, line, curses.color_pair(C_ASCII))
     elif key == "contact":
         art = PHONE_ASCII
-        art_x = w - 36
-        art_y = 4
+        art_x = w - 42
+        art_y = 2
         for i, line in enumerate(art):
             safe_add(stdscr, art_y + i, art_x, line, curses.color_pair(C_ASCII))
 
