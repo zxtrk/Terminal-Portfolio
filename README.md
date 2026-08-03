@@ -114,7 +114,7 @@ On Windows, run this inside WSL — `curses` is not natively available in the st
 
 **Artjom Japins** — Zxtrk
 
-[artjomjapins.site](https://artjomjapins.site) · [github.com/zxrk](https://github.com/zxrk) · [japinsartjom@gmail.com](mailto:japinsartjom@gmail.com)
+[artjomjapins.site](https://artjomjapins.site) · [github.com/zxrk](https://github.com/zxrk) · [ArtjomJapins@proton.me](mailto:ArtjomJapins@proton.me)
 
 ---
 
