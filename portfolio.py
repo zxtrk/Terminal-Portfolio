@@ -5,7 +5,7 @@
   Author   : Artjom Japins
   Website  : artjomjapins.site
   GitHub   : github.com/zxtrk
-  Access   : ssh portfolio@artjomjapins.site
+  Access   : ssh portfolio@ssh.artjomjapins.site
 
   Copyright (c) 2024 Artjom Japins. All rights reserved.
   Do not reproduce or redistribute without permission.
@@ -121,7 +121,7 @@ CONTACT_INTRO = [
 CONTACTS = [
     ("EMAIL",         "japinsartjom@gmail.com"),
     ("WEBSITE",       "artjomjapins.site"),
-    ("SSH PORTFOLIO", "ssh portfolio@artjomjapins.site"),
+    ("SSH PORTFOLIO", "ssh portfolio@ssh.artjomjapins.site"),
     ("GITHUB",        "github.com/zxtrk"),
 ]
 
@@ -619,7 +619,7 @@ def splash(win):
     win.nodelay(True)
     try:
         h, w = win.getmaxyx()
-        cmd = "ssh portfolio@artjomjapins.site"
+        cmd = "ssh portfolio@ssh.artjomjapins.site"
         width = len(cmd) + 3
         x = max(0, (w - width) // 2)
         y = max(0, h // 2 - 1)

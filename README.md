@@ -12,7 +12,7 @@
 *A handcrafted interactive terminal experience — accessible from anywhere, over SSH.*
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3572A5?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![Platform](https://img.shields.io/badge/Platform-Linux%20%2F%20macOS%20%2F%20WSL-lightgrey?style=flat-square)](https://github.com/zxrk)
+[![Platform](https://img.shields.io/badge/Platform-Linux%20%2F%20macOS%20%2F%20WSL-lightgrey?style=flat-square)](https://github.com/zxtrk)
 [![Hosted on](https://img.shields.io/badge/Hosted%20on-Oracle%20Cloud-F80000?style=flat-square&logo=oracle&logoColor=white)](https://artjomjapins.site)
 [![Interface](https://img.shields.io/badge/Interface-curses%20TUI-orange?style=flat-square)]()
 [![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=flat-square)]()
@@ -39,7 +39,7 @@ The experience includes a home screen with a large ASCII name block and portrait
 ## Want to try it?
 
 ```sh
-ssh portfolio@artjomjapins.site
+ssh portfolio@ssh.artjomjapins.site
 ```
 
 That is all. Works on macOS, Linux, and Windows (PowerShell, Git Bash, or WSL). No account, no key, no configuration required. Minimum recommended terminal size is **120 × 30** characters.
@@ -100,8 +100,8 @@ The entire application is a single Python file with no external dependencies. Ev
 If you want to preview the layout on your own machine:
 
 ```sh
-git clone https://github.com/zxrk/terminal-portfolio.git
-cd terminal-portfolio
+git clone https://github.com/zxtrk/Terminal-Portfolio.git
+cd Terminal-Portfolio
 python3 portfolio.py
 ```
 
@@ -114,7 +114,7 @@ On Windows, run this inside WSL — `curses` is not natively available in the st
 
 **Artjom Japins** — Zxtrk
 
-[artjomjapins.site](https://artjomjapins.site) · [github.com/zxrk](https://github.com/zxrk) · [ArtjomJapins@proton.me](mailto:ArtjomJapins@proton.me)
+[artjomjapins.site](https://artjomjapins.site) · [github.com/zxtrk](https://github.com/zxtrk) · [ArtjomJapins@proton.me](mailto:ArtjomJapins@proton.me)
 
 ---
 
